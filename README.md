@@ -5,7 +5,7 @@ This is the code repository for [Deep Learning with TensorFlow 2 and Keras - 2nd
 Deep Learning with TensorFlow 2 and Keras, 2nd edition teaches deep learning techniques alongside TensorFlow (TF) and Keras. The book introduces neural networks with TensorFlow, runs through the main applications, covers two working example apps, and then dives into TF and cloudin production, TF mobile, and using TensorFlow with AutoML.
 
 ## Instructions and Navigation
-All of the code is organized into folders. Each folder starts with a number followed by the application name. For example, Chapter02.
+All of the code is organized into folders. Each folder starts with a number followed by the application name. For example, Chapter 2.
 
 
 
