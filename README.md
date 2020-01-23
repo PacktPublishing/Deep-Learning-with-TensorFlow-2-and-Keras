@@ -39,6 +39,11 @@ approximate page number of the code. (**This is something we'll do once all the 
 
 *Thanks again Sam S. we really appreciate your feedback and we'd love to get in touch to say thank you personally! Please feel free if you would like to contact me as the book's Producer, Ben Renow-Clarke, at benc@packt.com be great to connect!*
 
+![Antonio Gulli](https://github.com/PacktPublishing/Deep-Learning-with-TensorFlow-2-and-Keras/blob/master/images/Antonio.jpg) | ![Amita Kapoor](https://github.com/PacktPublishing/Deep-Learning-with-TensorFlow-2-and-Keras/blob/master/images/Amita.jpg) | ![Sujit Pal](https://github.com/PacktPublishing/Deep-Learning-with-TensorFlow-2-and-Keras/blob/master/images/Sujit.JPEG)
+------ | ------ | ------
+Antonio Gulli | Amita Kapoor | Sujit Pal
+
+
 ## Related Products
 * [Python Machine Learning – Third Edition](https://www.packtpub.com/data/python-machine-learning-third-edition)
 
