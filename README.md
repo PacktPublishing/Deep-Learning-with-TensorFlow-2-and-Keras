@@ -31,9 +31,9 @@ This is a compiled list of errors reported to us through Amazon with their solut
 - [x] On page 131 program, getting `cifar10_architecture.json` can't be opened error (**now fixed**)
 - [x] On page 131 getting error with `.astype` (**now fixed**)
 - [x] Many programs from Chapter 4 are giving errors and not running. Authors need to install latest versions of all the software tools on a clean new computer and test all the programs and update github web page with the source files that can be run using latest software tools versions please. Thanks.(**All the codes compile with the clean environment TF2.1. There are a few FutureWarnings which will be fixed. ETA 27/01/2020**)
-- [ ] Python program on page 131 is not working (**An issue is raised which seems to be related to https://github.com/tensorflow/tensorflow/issues/35934. ETA 27/01/2020**)
+- [ ] Python program on page 131 is not working (**An issue is raised which seems to be related to https://github.com/tensorflow/tensorflow/issues/35934.**)
 - [ ] Please rename each source code file by prefixing with pgXXX_ corresponding to
-approximate page number of the code. (**This is something we'll do once all the others issues are addressed. ETA - 31.01.20.**)
+approximate page number of the code. (**This is something we'll do once all the others issues are addressed.**)
 
 *Thanks again Sam S. we really appreciate your feedback and we'd love to get in touch to say thank you personally! Please feel free if you would like to contact me as the book's Producer, Ben Renow-Clarke, at benc@packt.com be great to connect!*
 
