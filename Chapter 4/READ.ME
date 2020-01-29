@@ -1,0 +1,13 @@
+# Install the latest version of conda, tensorflow, h5py, opencv
+
+conda update conda
+conda update --all
+pip install --upgrade tensorflow
+pip install --upgrade h5py
+pip install opencv-python
+
+# note that python VGG16_implemented.py
+# 
+#  expects to have the VGG16 model already downloaded into the .keras/models directory, had to do following prior to that:
+#  >>> import tensorflow as tf
+#  >>> tf.keras.applications.vgg16.VGG16(include_top=True, weights='imagenet', input_tensor=None, input_shape=None, pooling=None, classes=1000)
