@@ -1,6 +1,7 @@
 import tensorflow as tf
 from tensorflow.keras import layers, models
 import cv2, numpy as np
+import os
 
 # define a VGG16 network
 
@@ -62,7 +63,8 @@ im = cv2.resize(cv2.imread('cat.jpg'), (224, 224)).astype(np.float32)
 im = np.expand_dims(im, axis=0)
 
 # Test pretrained model
-model = VGG_16('/Users/antonio/.keras/models/vgg16_weights_tf_dim_ordering_tf_kernels.h5')
+path_file = os.path.join(os.path.expanduser("~"), '.keras/models/vgg16_weights_tf_dim_ordering_tf_kernels.h5')
+model = VGG_16(path_file)
 model.summary()
 model.compile(optimizer='sgd', loss='categorical_crossentropy')
 out = model.predict(im)
