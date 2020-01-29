@@ -23,7 +23,7 @@ fn(input, state)
 
 ```
 
-# Install the latest version of conda, tensorflow, h5py, opencv
+## Install the latest version of conda, tensorflow, h5py, opencv
 ```
 conda update conda
 conda update --all
