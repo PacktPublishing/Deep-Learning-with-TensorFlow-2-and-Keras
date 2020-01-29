@@ -23,6 +23,15 @@ fn(input, state)
 
 ```
 
+# Install the latest version of conda, tensorflow, h5py, opencv
+```
+conda update conda
+conda update --all
+pip install --upgrade tensorflow
+pip install --upgrade h5py
+pip install opencv-python
+```
+
 ## Incoming fixes:
 This is a compiled list of errors reported to us through Amazon with their solutions and ETA for fixes. Thanks to Sam S. for highlighting these:
 
