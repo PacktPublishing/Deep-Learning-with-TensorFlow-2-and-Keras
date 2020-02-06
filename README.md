@@ -35,14 +35,31 @@ pip install opencv-python
 ## Incoming fixes:
 This is a compiled list of errors reported to us through Amazon with their solutions and ETA for fixes. Thanks to Sam S. for highlighting these:
 
-- [x] Chapter 5 Python source code files are missing on Github download webpage (**now fixed**)
-- [x] Image files are missing (**added these files, also same issue as point 3. ETA 27/01/2020**)
-- [x] On page 131 program, getting `cifar10_architecture.json` can't be opened error (**now fixed**)
-- [x] On page 131 getting error with `.astype` (**now fixed**)
-- [x] Many programs from Chapter 4 are giving errors and not running. Authors need to install latest versions of all the software tools on a clean new computer and test all the programs and update github web page with the source files that can be run using latest software tools versions please. Thanks.(**All the codes compile with the clean environment TF2.1. There are a few FutureWarnings which will be fixed. ETA 27/01/2020**)
-- [ ] Python program on page 131 is not working (**An issue is raised which seems to be related to https://github.com/tensorflow/tensorflow/issues/35934.**)
-- [ ] Please rename each source code file by prefixing with pgXXX_ corresponding to
-approximate page number of the code. (**This is something we'll do once all the others issues are addressed.**)
+From Jan 26, 2020 Review Notes:
+* Some programs are giving "cublas64-100.dll" file not found error. Is it possible for authors to zip this dll file and post it on this book's Github page please?
+	
+*This doesnt look like it's depend on autors, but on the specific setup used by the reader. An additional information is needed from reader on this.*
+
+From Jan 25, 2020 Review Notes:
+* Ran cifar10_predict.py program of page 131. It ran without errors and gave output results. However, the output gave [4 4]. This output is saying both "standing cat imge" and "dog image" belong to same class of four. This result may be wrong, due to one or both of the following reasons:
+    - Model file "cifar10_weights.h5" used by this program is wrong?
+    - Accuracy of training program that generated this model file is very low?
+
+*All the above is fixed.*
+
+Questions are:
+* Which is the traing program that generated the above model file?
+* Is it the program on pages 128 and 129?
+ 
+*This is based on the pre-trained model contained in TF/Keras*
+
+* Program on page 129 is saving to "model.h5" file.
+* I ran the program on page 129 and renamed the model file "model.h5" as "cifar10_weights.h5".
+* Then I ran program on page 131 and getting following error: ValueError: You are trying to load a weight file containing 13 layers into a model with 6 layers.
+* Authors need to fix these errors please?
+* Fix model file names of programs on pages 129 and 131 please?
+
+*The READ.ME file in Chapter 4 clarifies how to install the model with pre-trained weights.*
 
 *Thanks again Sam S. we really appreciate your feedback and we'd love to get in touch to say thank you personally! Please feel free if you would like to contact me as the book's Producer, Ben Renow-Clarke, at benc@packt.com be great to connect!*
 
