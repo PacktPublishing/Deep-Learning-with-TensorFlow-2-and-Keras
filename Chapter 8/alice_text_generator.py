@@ -39,7 +39,7 @@ def split_train_labels(sequence):
 class CharGenModel(tf.keras.Model):
 
     def __init__(self, vocab_size, num_timesteps, 
-            embedding_dim, rnn_output_dim, **kwargs):
+            embedding_dim, **kwargs):
         super(CharGenModel, self).__init__(**kwargs)
         self.embedding_layer = tf.keras.layers.Embedding(
             vocab_size,
@@ -129,9 +129,8 @@ print(dataset)
 # define network
 vocab_size = len(vocab)
 embedding_dim = 256
-rnn_output_dim = 1024
 
-model = CharGenModel(vocab_size, seq_length, embedding_dim, rnn_output_dim)
+model = CharGenModel(vocab_size, seq_length, embedding_dim)
 model.build(input_shape=(batch_size, seq_length))
 model.summary()
 
@@ -161,8 +160,7 @@ for i in range(num_epochs // 10):
     model.save_weights(checkpoint_file)
 
     # create a generative model using the trained model so far
-    gen_model = CharGenModel(vocab_size, seq_length, embedding_dim, 
-        rnn_output_dim)
+    gen_model = CharGenModel(vocab_size, seq_length, embedding_dim)
     gen_model.load_weights(checkpoint_file)
     gen_model.build(input_shape=(1, seq_length))
 
