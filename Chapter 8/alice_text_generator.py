@@ -19,7 +19,7 @@ def download_and_read(urls):
     for i, url in enumerate(urls):
         p = tf.keras.utils.get_file("ex1-{:d}.txt".format(i), url,
             cache_dir=".")
-        text = open(p, "r").read()
+        text = open(p, mode="r", encoding="utf-8").read()
         # remove byte order mark
         text = text.replace("\ufeff", "")
         # remove newlines
