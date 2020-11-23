@@ -45,8 +45,8 @@ def download_and_read():
 
 
 class Encoder(tf.keras.Model):
-    def __init__(self, vocab_size, num_timesteps, 
-            embedding_dim, encoder_dim, **kwargs):
+    def __init__(self, vocab_size, embedding_dim, num_timesteps, 
+            encoder_dim, **kwargs):
         super(Encoder, self).__init__(**kwargs)
         self.encoder_dim = encoder_dim
         self.embedding = tf.keras.layers.Embedding(
