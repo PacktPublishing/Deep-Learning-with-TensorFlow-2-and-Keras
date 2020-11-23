@@ -1,27 +1,23 @@
 import tensorflow as tf
 
 class SkipgramModel(tf.keras.Model):
-    def __init__(self, vocab_sz, embed_sz, window_sz, **kwargs):
+    def __init__(self, vocab_sz, embed_sz, **kwargs):
         super(SkipgramModel, self).__init__(**kwargs)
+        embedding = tf.keras.layers.Embedding(
+            input_dim=vocab_sz,
+            output_dim=embed_sz,
+            embeddings_initializer="glorot_uniform",
+            input_length=1
+        )
         self.word_model = tf.keras.Sequential([
-            tf.keras.layers.Embedding(
-                input_dim=vocab_sz,
-                output_dim=embed_sz,
-                embeddings_initializer="glorot_uniform",
-                input_length=1
-            ),
-            tf.keras.layers.Reshape((embed_sz,))
+            embedding,
+            tf.keras.layers.Flatten()
         ])
         self.context_model = tf.keras.Sequential([
-            tf.keras.layers.Embedding(
-                input_dim=vocab_sz,
-                output_dim=embed_sz,
-                embeddings_initializer="glorot_uniform",
-                input_length=1
-            ),
-            tf.keras.layers.Reshape((embed_sz,))
+            embedding,
+            tf.keras.layers.Flatten()
         ])
-        self.merge = tf.keras.layers.Dot(axes=0)
+        self.merge = tf.keras.layers.Dot(axes=1)
         self.dense = tf.keras.layers.Dense(1,
                 kernel_initializer="glorot_uniform",
                 activation="sigmoid"
@@ -38,9 +34,8 @@ class SkipgramModel(tf.keras.Model):
 
 VOCAB_SIZE = 5000
 EMBED_SIZE = 300
-WINDOW_SIZE = 1  # 3 word window, 1 on left, 1 on right
 
-model = SkipgramModel(VOCAB_SIZE, EMBED_SIZE, WINDOW_SIZE)
+model = SkipgramModel(VOCAB_SIZE, EMBED_SIZE)
 model.build(input_shape=[(None, VOCAB_SIZE), (None, VOCAB_SIZE)])
 model.compile(optimizer=tf.optimizers.Adam(),
     loss="categorical_crossentropy",
