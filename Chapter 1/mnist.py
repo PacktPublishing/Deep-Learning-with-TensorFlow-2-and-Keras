@@ -46,12 +46,12 @@ model.compile(optimizer='SGD',
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
 
-#training the moodel
+#training the model
 model.fit(X_train, Y_train,
 		batch_size=BATCH_SIZE, epochs=EPOCHS,
 		verbose=VERBOSE, validation_split=VALIDATION_SPLIT)
 
-#evalute the model
+#evaluate the model
 test_loss, test_acc = model.evaluate(X_test, Y_test)
 print('Test accuracy:', test_acc)
 
