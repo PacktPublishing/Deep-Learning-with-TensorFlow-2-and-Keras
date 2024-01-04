@@ -18,13 +18,13 @@ def load_data():
 
 def build_model():
 	model = models.Sequential()
-	#Input - Emedding Layer
+	#Input - Embedding Layer
 	# the model will take as input an integer matrix of size (batch, input_length)
 	# the model will output dimension (input_length, dim_embedding)
-    # the largest integer in the input should be no larger
-    # than n_words (vocabulary size).
-	model.add(layers.Embedding(n_words, 
-		dim_embedding, input_length=max_len))
+	# the largest integer in the input should be no larger
+	# than n_words (vocabulary size).
+	model.add(layers.InputLayer(input_shape=(max_len,)))
+	model.add(layers.Embedding(n_words, dim_embedding))
 
 	model.add(layers.Dropout(0.3))
 
