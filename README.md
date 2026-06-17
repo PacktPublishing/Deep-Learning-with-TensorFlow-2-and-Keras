@@ -70,6 +70,8 @@ Questions are:
 ------ | ------ | ------
 Antonio Gulli | Amita Kapoor | Sujit Pal
 
+## Errata
+* **Preface(Figure 1)**: X-axis label - **2028** _should_be_ **2018**
 
 ## Related Products
 * [Python Machine Learning – Third Edition](https://www.packtpub.com/data/python-machine-learning-third-edition)
